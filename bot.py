@@ -21,7 +21,7 @@ bot = Bot(token=TOKEN, parse_mode=types.ParseMode.HTML)
 dp = Dispatcher(bot)
 
 ###USE YOUR ROTATING PROXY### NEED HQ PROXIES ELSE WONT WORK UPDATE THIS FILED
-r = requests.get('https://api.proxyscrape.com/v2/?request=getproxies&protocol=http&timeout=05&country=india&ssl=all&anonymity=all&simplified=true').text
+r = requests.get('https://api.proxyscrape.com/v2/?request=getproxies&protocol=socks5&timeout=05&country=india&ssl=all&anonymity=all&simplified=true').text
 res = r.partition('\n')[0]
 proxy = {"http": f"http://{res}"}
 session = requests.session()
