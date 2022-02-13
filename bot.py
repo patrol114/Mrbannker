@@ -21,7 +21,7 @@ bot = Bot(token=TOKEN, parse_mode=types.ParseMode.HTML)
 dp = Dispatcher(bot)
 
 ###USE YOUR ROTATING PROXY### NEED HQ PROXIES ELSE WONT WORK UPDATE THIS FILED
-r = requests.get('http://api.scraperapi.com?api_key=2f96992966257150a03cc008e406ccb8&url=http://httpbin.org/ip').text
+r = requests.get('http://api.scraperapi.com?api_key=3d29d260ee86a4c3f4f71c03b6abf902&url=http://httpbin.org/ip').text
 res = r.partition('\n')[0]
 proxy = {"http": f"http://{res}"}
 session = requests.session()
