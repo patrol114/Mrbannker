@@ -21,7 +21,7 @@ bot = Bot(token=TOKEN, parse_mode=types.ParseMode.HTML)
 dp = Dispatcher(bot)
 
 ###USE YOUR ROTATING PROXY### NEED HQ PROXIES ELSE WONT WORK UPDATE THIS FILED
-r = requests.get('https://api.proxyscrape.com/v2/?request=displayproxies&protocol=all&timeout=10000&country=all&ssl=all&anonymity=all').text
+r = requests.get('https://api.proxyscrape.com/v2/?request=getproxies&protocol=http&timeout=10000&country=all&ssl=all&anonymity=all&simplified=true').text
 res = r.partition('\n')[0]
 proxy = {"http": f"http://{res}"}
 session = requests.session()
@@ -38,7 +38,7 @@ rnd = ''.join(random.choices(string.ascii_lowercase +
 async def helpstr(message: types.Message):
     await message.answer_chat_action("typing")
     await message.reply(
-        "Cmds <code>/chk cc/mm/yy/cvv</code>\n <a href='t.me/srfxd'>Here</a>"
+        "Hello how to use <code>/chk cc/mm/yy/cvv</code>\n <a href='t.me/srfxd'>Here</a>"
     )
     
 
@@ -78,6 +78,7 @@ async def tv(message: types.Message):
 <b>STATUS</b>➟ ❌WRONG DETAILS
 TOOK ➟ <b>{toc - tic:0.4f}</b>(s)
 <b>CHKBY</b>➟ <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>
+<b>BotBy:</b> @SRFXD
 """)
     elif "PASS" in r.text:
         res = r.json()
@@ -109,7 +110,7 @@ async def binio(message: types.Message):
 <b>BIN INFO</b>
 <code>{k.get_text()[62:]}</code>
 CheckedBy: <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>
-<b>Bot:</b> @srfxd
+<b>BotBy:</b> @SRFXD
 ╘═════════
 """
     await message.reply(INFO)
@@ -216,13 +217,17 @@ async def ch(message: types.Message):
 <b>MSG</b>➟ {msg}
 <b>TOOK:</b> <code>{toc - tic:0.4f}</code>(s)
 <b>CHKBY</b>➟ <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>
+<b>BotBy:</b> @SRFXD
 """)
-     
+    elif "Unrecognized request URL" in rx.text:
+        await message.reply("BUY THIS PAID CHECKER FROM @SRFXD PRICE 500RS FOR 2YEARS")
+    elif rx.status_code == 200:
         await message.reply(f"""
 ✔️<b>CC</b>➟ <code>{cc}</code>
 <b>STATUS</b>➟ #ApprovedCVV
 <b>TOOK:</b> <code>{toc - tic:0.4f}</code>(s)
 <b>CHKBY</b>➟ <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>
+<b>BotBy:</b> @SRFXD
 """)
     else:
         await message.reply(f"""
@@ -231,6 +236,7 @@ async def ch(message: types.Message):
 <b>MSG</b>➟ {msg}
 <b>TOOK:</b> <code>{toc - tic:0.4f}</code>(s)
 <b>CHKBY</b>➟ <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>
+<b>BotBy:</b> @SRFXD
 """)  
     
     
