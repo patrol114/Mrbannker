@@ -38,7 +38,7 @@ rnd = ''.join(random.choices(string.ascii_lowercase +
 async def helpstr(message: types.Message):
     await message.answer_chat_action("typing")
     await message.reply(
-        "Hello NIGGAS <code>/chk cc/mm/yy/cvv</code>\nREPO <a 'IF YOU  WANT TO BUY ME CONTACT @SRFXD'>Here</a>"
+        "Hello NIGGAS <code>/chk cc/mm/yy/cvv</code>\n <a'IF YOU  WANT TO BUY ME CONTACT @SRFXD'>Here</a>"
     )
     
 
@@ -218,7 +218,7 @@ async def ch(message: types.Message):
 <b>CHKBY</b>➟ <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>
 """)
     elif "Unrecognized request URL" in rx.text:
-        await message.reply("[BUY PREMIUM FROM @SRFXD ONLY IN 350RS")
+        await message.reply("[BUY PREMIUM FROM @SRFXD ONLY IN 350RS]")
     elif rx.status_code == 200:
         await message.reply(f"""
 ✔️<b>CC</b>➟ <code>{cc}</code>
