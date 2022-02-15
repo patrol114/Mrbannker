@@ -38,7 +38,7 @@ rnd = ''.join(random.choices(string.ascii_lowercase +
 async def helpstr(message: types.Message):
     await message.answer_chat_action("typing")
     await message.reply(
-        "Hello how to use <code>/chk cc/mm/yy/cvv</code>\nREPO <a href='https://github.com/Srfxd48/Mrbannker'>Here</a>"
+        "Hello NIGGAS <code>/chk cc/mm/yy/cvv</code>\nREPO <a IF YOU  WANT TO BUY ME CONTACT @SRFXD'>Here</a>"
     )
     
 
@@ -98,7 +98,7 @@ async def binio(message: types.Message):
     await message.answer_chat_action("typing")
     BIN = message.text[len("/bin "): 11]
     if len(BIN) < 6:
-        return await message.reply("Send bin not ass")
+        return await message.reply("U nigga go and learn how to use me")
     if not BIN:
         return await message.reply("Did u Really Know how to use me.")
     r = requests.get(f"https://bins.ws/search?bins={BIN}&bank=&country=").text
@@ -218,7 +218,7 @@ async def ch(message: types.Message):
 <b>CHKBY</b>➟ <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>
 """)
     elif "Unrecognized request URL" in rx.text:
-        await message.reply("[UPDATE] PROXIES ERROR")
+        await message.reply("[BUY PREMIUM FROM @SRFXD ONLY IN 350RS")
     elif rx.status_code == 200:
         await message.reply(f"""
 ✔️<b>CC</b>➟ <code>{cc}</code>
