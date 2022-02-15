@@ -217,9 +217,7 @@ async def ch(message: types.Message):
 <b>TOOK:</b> <code>{toc - tic:0.4f}</code>(s)
 <b>CHKBY</b>➟ <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>
 """)
-     ''' in rx.text:
-        await message.reply("BUY THIS PAID CHECKER FROM @SRFXD") '''
-    elif rx.status_code == 200:
+     
         await message.reply(f"""
 ✔️<b>CC</b>➟ <code>{cc}</code>
 <b>STATUS</b>➟ #ApprovedCVV
